@@ -18,10 +18,10 @@ jobs:
       version: '7.x'
       includePreviewVersions: true
 
-  - script: dotnet restore
+  - script: dotnet restore .\api\api.csproj
     displayName: 'Restore dependencies'
 
-  - script: dotnet build --configuration Release
+  - script: dotnet build .\api\api.csproj --configuration Release
     displayName: 'Build the project'
 
   - task: DotNetCoreCLI@2
